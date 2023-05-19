@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity"
+    android:background="@color/brown">
+
+    <TextView
+        android:id="@+id/txtHC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HATS COFFEE"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/txtHC"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTotal"
+        android:layout_below="@id/txtHC"
+        android:layout_marginTop="37dp"
+        android:textColor="@color/black"
+        android:text="Total"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJmlPesanan"
+        android:layout_below="@id/txtTotal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="2x Americano"
+        android:layout_marginStart="20dp"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalHarga"
+        android:layout_toRightOf="@id/txtJmlPesanan"
+        android:layout_below="@id/txtTotal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Rp. 30.000,00"
+        android:textStyle="bold"
+        android:layout_marginStart="160dp"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtWaktu"
+        android:layout_below="@id/totalHarga"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="Waktu Ambil"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJam"
+        android:layout_below="@id/txtWaktu"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="10:00 AM"
+        android:layout_marginStart="20dp"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtpayment"
+        android:layout_below="@id/txtJam"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="Pembayaran"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBank"
+        android:layout_below="@id/txtpayment"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:text="Transfer Bank"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+    <RadioButton
+        android:id="@+id/rb11"
+        android:layout_below="@id/txtBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BCA"
+        android:layout_marginStart="20dp"
+        android:textSize="15dp"
+        />
+    <RadioButton
+        android:id="@+id/rb12"
+        android:layout_below="@id/rb11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BRI"
+        android:layout_marginStart="20dp"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtemoney"
+        android:layout_below="@id/rb12"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="e-Money"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+    <RadioButton
+        android:id="@+id/rb21"
+        android:layout_below="@id/txtemoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dana"
+        android:layout_marginStart="20dp"
+        android:textSize="15dp"
+        />
+    <RadioButton
+        android:id="@+id/rb22"
+        android:layout_below="@id/rb21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gopay"
+        android:layout_marginStart="20dp"
+        android:textSize="15dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/rb22"
+        android:text="Tambahkan Ke Keranjang"
+        android:textSize="28dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/brown"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>
+

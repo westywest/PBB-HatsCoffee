@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="@color/brown">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="20dp">
+        </TextView>
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/baseline_account_circle_24" />
+
+        <TextView
+            android:layout_below="@id/imgProfile"
+            android:id="@+id/textUsername"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:drawableStart="@drawable/person"
+            android:drawablePadding="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/roundedcorner"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:text="Marshanda Raihan Widyaswari"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_below="@id/textUsername"
+            android:id="@+id/textPhone"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/teleponblack"
+            android:drawablePadding="10dp"
+            android:background="@drawable/roundedcorner"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:text="085712853917"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_below="@id/textPhone"
+            android:id="@+id/textEmail"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
+            android:background="@drawable/roundedcorner"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:text="marshanda@gmail.com"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

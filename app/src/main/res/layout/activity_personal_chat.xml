@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalChatActivity"
+    android:background="@color/brown">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txthatscoffee"
+            android:text="Hats Coffee"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtonline"
+            android:layout_below="@id/txthatscoffee"
+            android:text="Online"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/telepon"
+            android:layout_toRightOf="@id/txthatscoffee"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="90dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teks1"
+            android:text="Halo kak, saya ambil jam 10 ya"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@id/txtonline"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/roundedcorner"
+            android:padding="10dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/teks2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="12dp"
+            android:layout_toRightOf="@id/images"
+            android:background="@drawable/roundedcorner"
+            android:padding="10dp"
+            android:text="Baik kak."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/images"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logofix"
+            android:layout_marginStart="20dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="260dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/teks3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:background="@drawable/roundedcorner"
+            android:padding="10dp"
+            android:text="Pesanan sudah bisa diambil ya kak"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
