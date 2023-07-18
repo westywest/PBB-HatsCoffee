@@ -1,340 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/brown">
+        android:background="@color/brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
 
         <TextView
             android:id="@+id/txtHC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HATS COFFEE"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:textStyle="bold"
-            android:textSize="32sp"
+            android:text="HATS COFFEE"
             android:textColor="@color/white"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
-        <View
+        <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/keranjang"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="57dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/brown"
+            android:src="@drawable/keranjang"
             />
 
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/roundedcorner">
-
-        <TextView
-            android:id="@+id/txtamericano"
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMenu"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/imgAmericano"
-            android:text="Americano"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/txtdes1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtamericano"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgAmericano"
-            android:text="Espresso yang dicampur air mineral"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-        <TextView
-            android:id="@+id/txtharga1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtdes1"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgAmericano"
-            android:text="15.000"
-            android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"/>
+            tools:listitem="@layout/menu_list">
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="71dp"
-            android:layout_toRightOf="@id/txtamericano"
-            android:backgroundTint="@color/brown"
-            android:text="Masukkan Keranjang"
-            android:textSize="12dp" />
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgAmericano"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/americano" />
-
+        </androidx.recyclerview.widget.RecyclerView>
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="260dp"
-        android:background="@drawable/roundedcorner">
+    <!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="150dp"-->
+<!--        android:background="@drawable/roundedcorner">-->
 
-        <TextView
-            android:id="@+id/txtCap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/imgCap"
-            android:text="Cappucino"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/txtamericano"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toRightOf="@id/imgAmericano"-->
+<!--            android:text="Americano"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtdes1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtamericano"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgAmericano"-->
+<!--            android:text="Espresso yang dicampur air mineral"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtharga1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtdes1"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgAmericano"-->
+<!--            android:text="15.000"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textStyle="bold"/>-->
 
-        <TextView
-            android:id="@+id/txtdes2"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtCap"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgCap"
-            android:text="Espresso yang dicampur air mineral dan susu"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-        <TextView
-            android:id="@+id/txtharga2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtdes2"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgCap"
-            android:text="18.000"
-            android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="73dp"
-            android:layout_toRightOf="@id/txtCap"
-            android:backgroundTint="@color/brown"
-            android:text="Masukkan Keranjang"
-            android:textSize="12dp" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgCap"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/cappucino" />
-    </RelativeLayout>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="71dp"-->
+<!--            android:layout_toRightOf="@id/txtamericano"-->
+<!--            android:backgroundTint="@color/brown"-->
+<!--            android:text="Masukkan Keranjang"-->
+<!--            android:textSize="12dp" />-->
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="370dp"
-        android:background="@drawable/roundedcorner">
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgAmericano"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:src="@drawable/americano" />-->
 
-        <TextView
-            android:id="@+id/txtCarLat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/imgCarLat"
-            android:text="Caramel Latte"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+<!--    </RelativeLayout>-->
 
-        <TextView
-            android:id="@+id/txtdes3"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtCarLat"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgCarLat"
-            android:text="Espresso yang dicampur air mineral dan susu serta diberi saus caramel"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-        <TextView
-            android:id="@+id/txtharga3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtdes3"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgCarLat"
-            android:text="20.000"
-            android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="35dp"
-            android:layout_toRightOf="@id/txtCarLat"
-            android:backgroundTint="@color/brown"
-            android:text="Masukkan Keranjang"
-            android:textSize="12dp" />
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="260dp"-->
+<!--        android:background="@drawable/roundedcorner">-->
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgCarLat"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/caramellate" />
-    </RelativeLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/txtCap"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toRightOf="@id/imgCap"-->
+<!--            android:text="Cappucino"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold" />-->
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="480dp"
-        android:background="@drawable/roundedcorner">
+<!--        <TextView-->
+<!--            android:id="@+id/txtdes2"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtCap"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgCap"-->
+<!--            android:text="Espresso yang dicampur air mineral dan susu"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtharga2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtdes2"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgCap"-->
+<!--            android:text="18.000"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textStyle="bold"/>-->
 
-        <TextView
-            android:id="@+id/txtRV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/imgRV"
-            android:text="Red Velvet"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="73dp"-->
+<!--            android:layout_toRightOf="@id/txtCap"-->
+<!--            android:backgroundTint="@color/brown"-->
+<!--            android:text="Masukkan Keranjang"-->
+<!--            android:textSize="12dp" />-->
 
-        <TextView
-            android:id="@+id/txtdes4"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtRV"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgRV"
-            android:text="Buttermilk, bubuk kakao, kopi, cuka, dan pewarna makanan merah"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-        <TextView
-            android:id="@+id/txtharga4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtdes4"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgRV"
-            android:text="22.000"
-            android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"/>
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgCap"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/cappucino" />-->
+<!--    </RelativeLayout>-->
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="71dp"
-            android:layout_toRightOf="@id/txtRV"
-            android:backgroundTint="@color/brown"
-            android:text="Masukkan Keranjang"
-            android:textSize="12dp" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgRV"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/redvelvet" />
-    </RelativeLayout>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="370dp"-->
+<!--        android:background="@drawable/roundedcorner">-->
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="590dp"
-        android:background="@drawable/roundedcorner">
+<!--        <TextView-->
+<!--            android:id="@+id/txtCarLat"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toRightOf="@id/imgCarLat"-->
+<!--            android:text="Caramel Latte"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold" />-->
 
-        <TextView
-            android:id="@+id/txtLT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_toRightOf="@id/imgLT"
-            android:text="Lemon Tea"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:id="@+id/txtdes3"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtCarLat"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgCarLat"-->
+<!--            android:text="Espresso yang dicampur air mineral dan susu serta diberi saus caramel"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtharga3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtdes3"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgCarLat"-->
+<!--            android:text="20.000"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textStyle="bold"/>-->
 
-        <TextView
-            android:id="@+id/txtdes5"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtLT"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgLT"
-            android:text="Minuman teh yang dipadukan dengan perasan lemon"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-        <TextView
-            android:id="@+id/txtharga5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtdes5"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imgLT"
-            android:text="20.000"
-            android:textColor="@color/black"
-            android:textSize="10sp"
-            android:textStyle="bold"/>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="35dp"-->
+<!--            android:layout_toRightOf="@id/txtCarLat"-->
+<!--            android:backgroundTint="@color/brown"-->
+<!--            android:text="Masukkan Keranjang"-->
+<!--            android:textSize="12dp" />-->
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="65dp"
-            android:layout_toRightOf="@id/txtLT"
-            android:backgroundTint="@color/brown"
-            android:text="Masukkan Keranjang"
-            android:textSize="12dp" />
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgCarLat"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/caramellate" />-->
+<!--    </RelativeLayout>-->
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgLT"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/lemontea" />
-    </RelativeLayout>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="480dp"-->
+<!--        android:background="@drawable/roundedcorner">-->
 
-</FrameLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/txtRV"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toRightOf="@id/imgRV"-->
+<!--            android:text="Red Velvet"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtdes4"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtRV"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgRV"-->
+<!--            android:text="Buttermilk, bubuk kakao, kopi, cuka, dan pewarna makanan merah"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtharga4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtdes4"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgRV"-->
+<!--            android:text="22.000"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="71dp"-->
+<!--            android:layout_toRightOf="@id/txtRV"-->
+<!--            android:backgroundTint="@color/brown"-->
+<!--            android:text="Masukkan Keranjang"-->
+<!--            android:textSize="12dp" />-->
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgRV"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/redvelvet" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="590dp"-->
+<!--        android:background="@drawable/roundedcorner">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtLT"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toRightOf="@id/imgLT"-->
+<!--            android:text="Lemon Tea"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtdes5"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtLT"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgLT"-->
+<!--            android:text="Minuman teh yang dipadukan dengan perasan lemon"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtharga5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/txtdes5"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_toRightOf="@id/imgLT"-->
+<!--            android:text="20.000"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="65dp"-->
+<!--            android:layout_toRightOf="@id/txtLT"-->
+<!--            android:backgroundTint="@color/brown"-->
+<!--            android:text="Masukkan Keranjang"-->
+<!--            android:textSize="12dp" />-->
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/imgLT"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/lemontea" />-->
+<!--    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

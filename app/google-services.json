@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99539337971",
+    "project_id": "hatscoffee-eec9c",
+    "storage_bucket": "hatscoffee-eec9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99539337971:android:b710147256242fce536d86",
+        "android_client_info": {
+          "package_name": "com.myanuarbf.hatscoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99539337971-t3n7pdvkgr9nnlt38rdv1di8c1ag86g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpWhDwq8xcqGijLjag1Z-Y-uK5IllpVxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99539337971-t3n7pdvkgr9nnlt38rdv1di8c1ag86g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

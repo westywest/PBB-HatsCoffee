@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundedcorner">
+
+        <TextView
+            android:id="@+id/txtMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_toRightOf="@id/imgAmericano"
+            android:text="Americano"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMenu"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imgAmericano"
+            android:text="Espresso yang dicampur air mineral"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/txtHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDesc"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imgAmericano"
+            android:text="15.000"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="71dp"
+            android:layout_toRightOf="@id/txtMenu"
+            android:backgroundTint="@color/brown"
+            android:text="Masukkan Keranjang"
+            android:textSize="12dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAmericano"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/americano" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
